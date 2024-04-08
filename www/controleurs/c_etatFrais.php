@@ -18,7 +18,8 @@ $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 $idVisiteur = $_SESSION['idVisiteur'];
 switch ($action) {
 case 'selectionnerMois':
-    $lesMois = $pdo->getLesMoisDisponibles($idVisiteur);
+    $lesMois = $pdo->getLesMoisDisponibles('c3');
+    var_dump($lesMois);
     // Afin de sélectionner par défaut le dernier mois dans la zone de liste
     // on demande toutes les clés, et on prend la première,
     // les mois étant triés décroissants
