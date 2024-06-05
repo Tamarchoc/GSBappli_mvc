@@ -169,11 +169,14 @@
             <div class="form-group">
                 <label for="hidden" accesskey="n">Nombre de justificatifs: </label>
       </select>
-    <input type="number" class="small-input" id="justificatifs" name="justificatifs" placeholder="Nombre" />
+    <input type="number" class="small-input" id="justificatifs" name="justificatifs" value="<?php echo $nombresJustificatifs?>" placeholder="Nombre" />
 </div> 
   
-
- <button class="btn btn-success CV" type="submit">Valider</button>
-    <button class="btn btn-danger" type="reset">Réinitialiser</button>
+  <form  method="post"  action="index.php?uc=validerFrais&action=nouveauValider"
+         role="form">
+        <input name="lstMois" type="hidden" id="lstMois" class="form-control" value="<?php echo $moisASelectionner ?>">
+    <input name="lstVisiteur" type="hidden" id="lstVisiteurs" class="form-control" value="<?php echo $visiteurASelectionner ?>">       
+       <button class="btn btn-success CV" type="submit">Valider</button>
+    </form>
     
-    
+   
